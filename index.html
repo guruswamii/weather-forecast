@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+            <button id="location-btn">Use Current Location</button>
+        </header>
+        <main>
+            <div class="current-weather">
+                <h1 class="temperature"></h1>
+                <h2 class="description"></h2>
+                <p class="details"></p>
+                <div class="additional-info">
+                    <div class="info-item">
+                        <p>Feels Like</p>
+                        <p class="feels-like"></p>
+                    </div>
+                    <div class="info-item">
+                        <p>Precipitation</p>
+                        <p class="precipitation"></p>
+                    </div>
+                    <div class="info-item">
+                        <p>Humidity</p>
+                        <p class="humidity"></p>
+                    </div>
+                    <div class="info-item">
+                        <p>Visibility</p>
+                        <p class="visibility"></p>
+                    </div>
+                    <div class="info-item">
+                        <p>Wind</p>
+                        <p class="wind"></p>
+                    </div>
+                </div>
+                <p class="date">Date: </p>
+                <p class="sunrise">Sunrise: </p>
+                <p class="timezone">Timezone: </p>
+                <p class="day-length">Day Length: </p>
+                <p class="sunset">Sunset: </p>
+                <p class="suggestion"></p>
+            </div>
+            <div class="hourly-forecast">
+                <h2 class="hey">24-Hour Forecast</h2>
+                <div class="forecast-container">
+                    <table class="hourly-table"></table>
+                    <div class="chart-container">
+                        <canvas id="air-quality-chart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+                <h2>48-Hour Forecast</h2>
+                <canvas id="hourly-chart" width="800" height="400"></canvas>
+            </div>
+            <div class="daily-forecast">
+                <ul class="daily-list"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
